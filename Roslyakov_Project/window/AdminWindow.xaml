@@ -1,0 +1,47 @@
+﻿<Window x:Class="Roslyakov_Project.window.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Roslyakov_Project.window"
+        mc:Ignorable="d"
+       Title="Главное окно" Height="300" Width="300">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="/icons/iconflight.png" Margin="5" MaxWidth="50" Grid.Row="0"/>
+        <TextBlock TextAlignment="Center" 
+                   TextWrapping="Wrap"
+                   Text="Панель менеджера"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Row="1"
+                   FontFamily="Comfortaa"
+                   Margin="5"
+                   FontSize="20"/>
+        <StackPanel Grid.Row="2">
+            <Button HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    Background="CadetBlue"
+                    Foreground="Black"
+                    Margin="15" 
+                Click="Button_Flights">
+                <TextBlock Text="Перейти к рейсам" TextWrapping="Wrap" Margin="5" FontFamily="Comfortaa" FontSize="15"/>
+            </Button>
+            <Button HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    Background="CadetBlue"
+                    Foreground="Black"
+                    Margin="15" 
+                Click="Button_Orders">
+                <TextBlock Text="Перейти к заказам" TextWrapping="Wrap" Margin="5" FontFamily="Comfortaa" FontSize="15"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

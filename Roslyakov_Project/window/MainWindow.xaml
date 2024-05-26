@@ -1,0 +1,57 @@
+﻿<Window x:Class="Roslyakov_Project.window.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Roslyakov_Project.window"
+        mc:Ignorable="d"
+         Title="Главное окно" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="/icons/iconflight.png" Margin="5" MaxWidth="50" Grid.Row="0"/>
+        <TextBlock TextAlignment="Center" 
+                   TextWrapping="Wrap"
+                   Text="Добро пожаловать в приложение авиакомпании!"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Row="1"
+                   FontFamily="Comfortaa"
+                   Margin="5"
+                   FontSize="20"/>
+        <TextBlock TextAlignment="Center" 
+                   TextWrapping="Wrap"
+                   Text="Cписок доступных рейсов:"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Row="2"
+                   FontFamily="Comfortaa"
+                   Margin="10"
+                   FontSize="20"/>
+        <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="Khaki" Grid.Row="3">
+            <Border.Effect>
+                <DropShadowEffect  Color="Black" BlurRadius="3" ShadowDepth="0">
+                </DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <ListBox Name="ListFlights" Background="{x:Null}" FontSize="15" MinWidth="500" MinHeight="100" AllowDrop="True"/>
+                <Button         Margin="10"
+                                MinHeight="30"
+                                Foreground="Black"
+                                Background="White" Click="Button_Flights">
+                    <TextBlock Text="Заказать авиабилеты" FontFamily="Comfortaa" FontSize="15"/>
+                </Button>
+                <Button         Margin="10"
+                                MinHeight="30"
+                                Foreground="Black"
+                                Background="White" Click="Button_Info">
+                    <TextBlock Text="Информация об авиакомпании" FontFamily="Comfortaa" FontSize="15"/>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

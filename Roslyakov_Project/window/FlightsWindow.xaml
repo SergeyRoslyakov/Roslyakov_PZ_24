@@ -1,0 +1,65 @@
+﻿<Window x:Class="Roslyakov_Project.window.FlightsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Roslyakov_Project.window"
+        mc:Ignorable="d"
+        Title="Автомобили" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="/icons/iconflight.png" Margin="5" MaxWidth="50" Grid.Row="0"/>
+        <TextBlock TextAlignment="Center" 
+                   TextWrapping="Wrap"
+                   Text="Панель менеджера:"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Row="1"
+                   FontFamily="Comfortaa"
+                   Margin="5"
+                   FontSize="20"/>
+        <TextBlock TextAlignment="Center" 
+                   TextWrapping="Wrap"
+                   Text="Cписок рейсов:"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Row="2"
+                   FontFamily="Comfortaa"
+                   Margin="10"
+                   FontSize="20"/>
+        <ListBox Name="ListFlights" MinHeight="100" Background="{x:Null}" Grid.Row="3" AllowDrop="True"/>
+        <StackPanel Grid.Row="4">
+            <Button             Margin="5"
+                                MinHeight="30"
+                                Foreground="Black"
+                                Background="White" Click="Button_Add_Flight">
+                <TextBlock Text="Добавить рейс" FontFamily="Comfortaa" FontSize="15"/>
+            </Button>
+            <Button             Margin="5"
+                                MinHeight="30"
+                                Foreground="Black"
+                                Background="White" Click="Button_Edit_Flight">
+                <TextBlock Text="Редактировать рейс" FontFamily="Comfortaa" FontSize="15"/>
+            </Button>
+            <Button             Margin="5"
+                                MinHeight="30"
+                                Foreground="Black"
+                                Background="White" Click="Button_Delete_Flight">
+                <TextBlock Text="Удалить рейс" FontFamily="Comfortaa" FontSize="15"/>
+            </Button>
+            <Button             Margin="5"
+                                MinHeight="30"
+                                Foreground="Black"
+                                Background="White" Click="Exit">
+                <TextBlock Text="Bернуться на главную" FontFamily="Comfortaa" FontSize="15"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
